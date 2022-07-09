@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="memberMain.MemberController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="resButton" mnemonicParsing="false" onAction="#resProc" prefHeight="100.0" prefWidth="500.0" text="예약하기">
+               <font>
+                  <Font size="48.0" />
+               </font></Button>
+            <Button fx:id="checkButton" mnemonicParsing="false" onAction="#checkProc" prefHeight="100.0" prefWidth="500.0" text="점검일지">
+               <font>
+                  <Font size="48.0" />
+               </font></Button>
+            <Button fx:id="mypageButton" mnemonicParsing="false" onAction="#mypageProc" prefHeight="100.0" prefWidth="500.0" text="회원 정보 수정">
+               <font>
+                  <Font size="36.0" />
+               </font></Button>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <Button fx:id="logoutButton" alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: red;" text="로그아웃" textFill="WHITE" BorderPane.alignment="TOP_RIGHT">
+         <BorderPane.margin>
+            <Insets right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </top>
+</BorderPane>

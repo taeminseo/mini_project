@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="shop.res.resController">
+   <center>
+      <TableView fx:id="resView" onMouseClicked="#getSelected" prefHeight="525.0" prefWidth="500.0" BorderPane.alignment="BOTTOM_CENTER">
+        <columns>
+            <TableColumn fx:id="resNumColumn" prefWidth="100.0" text="순번" />
+          <TableColumn fx:id="resColumn" prefWidth="150.0" text="예약일" />
+          <TableColumn fx:id="conColumn" prefWidth="290.0" text="내용" />
+            <TableColumn fx:id="carNColumn" prefWidth="130.0" text="차번호" />
+        </columns>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <left>
+      <VBox alignment="CENTER" prefHeight="400.0" prefWidth="300.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="예약일" textFill="#f8f8f8">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="resDateTxt" />
+               </children>
+            </HBox>
+            <DatePicker fx:id="resUpDate" onAction="#dateSelectProc" />
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+               <children>
+                  <Label text="차번호" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="carNumTxt" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="20.0" top="30.0" />
+         </padding></VBox>
+   </left>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="100.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="reserveUpdate" lineSpacing="10.0" mnemonicParsing="false" onAction="#resUpdateProc" prefHeight="50.0" prefWidth="167.0" style="-fx-background-color: red;" text="예약 수정" textFill="#f2efef">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Button fx:id="reserveUpdate1" mnemonicParsing="false" onAction="#showTableProc" prefHeight="50.0" prefWidth="167.0" style="-fx-background-color: red;" text="예약보기" textFill="#f2efef">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children></HBox>
+   </bottom>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="30.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <Label prefHeight="60.0" text="예약 확인 및 수정" textFill="WHITE" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="48.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+</BorderPane>
